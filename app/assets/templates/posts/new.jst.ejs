@@ -1,0 +1,13 @@
+<% var action = (post.id) ? "Edit" : "Create" %>
+<h2><%= action %> Post</h2>
+<form id="form">
+	<label for="post_title">Title</label>
+	<br>
+	<input type="text" name="post[title]" id="post_title" value="<%= post.get('title') %>">
+	<br>
+	<label for="post_body">Body</label>
+	<br>
+	<input type="text" name="post[body]" id="post_body" value="<%= post.get('body') %>">
+	<br>
+	<input type="submit" value="<%= action  %> Post">
+</form>
